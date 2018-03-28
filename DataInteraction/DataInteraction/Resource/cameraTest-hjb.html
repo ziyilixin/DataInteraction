@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="" />
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta http-equiv="x-rim-auto-match" content="none" />
+    <meta name="wap-font-scale" content="no">
+    <meta name="Keywords" content="贷款,银行" />
+	<script type="text/javascript" src="hjbbridge1.0.0.js"></script>
+    <title>native交互测试</title>
+    <style>
+        *{
+            margin: 0; 
+            padding: 0;
+        }
+        .btn {
+            width: 100px;
+            height: 40px;
+            background: #7d8c93;
+            color: #fff;
+            border-radius: 5px;
+            margin: 20px auto;
+            line-height: 40px;
+            text-align: center;
+        }
+        body {
+            padding: 30px;
+        }
+    </style>
+  </head>
+<body>
+    <div class="btn" id="camara">拍照</div>
+    <div class="btn" id="gps">GPS</div>
+    <div class="btn" id="network">网络</div>
+    <div class="btn" id="close">关闭</div>
+    <p id="tips"></p>
+    <img src="#" alt="" width="200" id="img">
+<script>
+    var tips = document.getElementById('tips')
+    /*var JSBridge_objCount = 0;
+    var JSBridge_objArray = new Array();
+
+    function JSBridgeObj(params){
+        this.objectJson = JSON.stringify(params);
+        this.sendBridgeObject = JSBridgeObj_SendObject;
+    }
+
+    function JSBridgeObj_SendObject(){
+        JSBridge_objArray[JSBridge_objCount] = this.objectJson;
+        var iFrame = document.createElement("IFRAME");
+        iFrame.setAttribute("src","JSBridge://bridge.lu.com?ReadNotificationWithId=" + JSBridge_objCount);
+        document.documentElement.appendChild(iFrame);
+        iFrame.parentNode.removeChild(iFrame);
+        iFrame = null;
+        JSBridge_objCount++;
+    }
+
+    function JSBridge_getJsonStringForObjectWithId(objId){
+        var jsonStr = JSBridge_objArray[objId];
+        JSBridge_objArray[objId] = null;
+        return jsonStr;
+    }
+
+    if(!window.bridge){
+        window.bridge = {
+            call:function(params){
+                try {
+                    if(window.AndroidBridge){
+                        window.AndroidBridge.jvWebViewDidCallFromJS(JSON.stringify(params));
+                    }else if(window.Android){
+                        if(params.retFun){
+                            window.Android[params.retFun](params.val);
+                        }else{
+                            window.Android.SkipInto(JSON.stringify(params));
+                        }
+                    }else{
+                        var obj = new JSBridgeObj(params);
+                        obj.sendBridgeObject();
+                    }
+                } catch (e) {
+                    tips.innerHTML = e.toString()
+                }
+            }
+        }
+    }*/
+</script>
+<script>
+    var camara = document.getElementById('camara')
+    var gps = document.getElementById('gps')
+    var img = document.getElementById('img')
+    var network = document.getElementById('network')
+    var close = document.getElementById('close')
+    
+    tips.innerHTML = navigator.userAgent
+    
+    // 拍照
+    camara.onclick = function() {
+        tips.innerHTML = '拍照-点击事件'
+        window.HJBbridge.getImageByCamera({
+            maxSize: 300,
+            maxLength: 800,
+            onFinish: function (result) {
+                tips.innerHTML = 'camara-成功回调'
+                alert(result.code)
+                if (result.code == '0') {
+                    alert('拍照成功')
+                    img.src = result.data.image
+                    tips.innerHTML = img.src
+                } else if (result.code == '1') {
+                    alert('没有拍照权限')
+                } else if (result.code == '2') {
+                    alert('没有选择相片权限')
+                }
+                  else if (result.code == '3') {
+                  alert('其他原因失败')
+                  }
+            },
+        })
+    }
+
+    // 获取 GSP
+    gps.onclick = function () {
+        tips.innerHTML = 'gps-点击事件'
+        window.HJBbridge.getLocation({
+            onFinish: function (result) {
+                tips.innerHTML = 'gps-成功回调'
+                alert(result.code)
+                if (result.code == '0') {
+                    alert('定位成功')
+                    tips.innerHTML = 'latitude:' + result.data.latitude + '  longitude:' + result.data.longitude
+                    return
+                }
+                else if (result.code == '3') {
+                    alert('其他原因失败')
+                    return
+                }
+                else if (result.code == '4') {
+                    alert('没有定位权限')
+                    return
+                }
+                else if (result.code == '5') {
+                    alert('定位失败')
+                    return
+                }
+            }
+        })
+    }
+
+    // 网络
+    network.onclick = function () {
+        tips.innerHTML = '网络-点击事件'
+            window.HJBbridge.getNetworkInfo({
+                onFinish: function (result) {
+                tips.innerHTML = '网络-成功回调'
+                alert(result.code)
+                if (result.code == '0') {
+                    alert('获取网络成功')
+                    return
+                }
+                else if (result.code == '5') {
+                    alert('没有网络')
+                    return
+                }
+            }
+        })
+    }
+
+    // 关闭 webview
+    close.onclick = function() {
+        window.HJBbridge.close()
+    }
+
+    /*var ua = navigator.userAgent.toLowerCase()
+    if (ua.indexOf('lufax') > 0) {
+        sessionStorage.app = 'lufax'
+    }
+    tips.innerHTML = sessionStorage.app*/
+</script>
+</body>
+</html>
