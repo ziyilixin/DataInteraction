@@ -1,10 +1,3 @@
-//
-//  HJBFunction.m
-//  HJBBaseASC
-//
-//  Created by 小明 on 15/12/16.
-//  Copyright © 2015年 hjb. All rights reserved.
-//
 
 //初始化捕捉设备（AVCaptureDevice），类型为AVMediaTypeVideo
 #define Kdevice [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo]

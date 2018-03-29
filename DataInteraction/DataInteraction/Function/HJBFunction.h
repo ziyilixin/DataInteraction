@@ -1,10 +1,3 @@
-//
-//  HJBFunction.h
-//  HJBBaseASC
-//
-//  Created by 小明 on 15/12/16.
-//  Copyright © 2015年 hjb. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>

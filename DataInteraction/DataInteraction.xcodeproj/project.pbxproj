@@ -19,6 +19,9 @@
 		BB63AFD2206B7B2300AD5494 /* HLNetWorkReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BB63AFD1206B7B2300AD5494 /* HLNetWorkReachability.m */; };
 		BB63AFE0206B816A00AD5494 /* HJBFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = BB63AFDF206B816A00AD5494 /* HJBFunction.m */; };
 		BBAEC08C206CF69C00292788 /* WechatIMG31.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BBAEC08B206CF69C00292788 /* WechatIMG31.jpeg */; };
+		BBAEC08E206CF78400292788 /* WechatIMG32.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BBAEC08D206CF78400292788 /* WechatIMG32.jpeg */; };
+		BBAEC090206CF78F00292788 /* WechatIMG33.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BBAEC08F206CF78F00292788 /* WechatIMG33.jpeg */; };
+		BBAEC092206CF79600292788 /* WechatIMG34.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BBAEC091206CF79600292788 /* WechatIMG34.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		BB63AFDE206B816A00AD5494 /* HJBFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJBFunction.h; sourceTree = "<group>"; };
 		BB63AFDF206B816A00AD5494 /* HJBFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJBFunction.m; sourceTree = "<group>"; };
 		BBAEC08B206CF69C00292788 /* WechatIMG31.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WechatIMG31.jpeg; sourceTree = "<group>"; };
+		BBAEC08D206CF78400292788 /* WechatIMG32.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WechatIMG32.jpeg; sourceTree = "<group>"; };
+		BBAEC08F206CF78F00292788 /* WechatIMG33.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WechatIMG33.jpeg; sourceTree = "<group>"; };
+		BBAEC091206CF79600292788 /* WechatIMG34.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WechatIMG34.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				BBAEC08B206CF69C00292788 /* WechatIMG31.jpeg */,
+				BBAEC08D206CF78400292788 /* WechatIMG32.jpeg */,
+				BBAEC08F206CF78F00292788 /* WechatIMG33.jpeg */,
+				BBAEC091206CF79600292788 /* WechatIMG34.jpeg */,
 				BB63AFCA206B5D7100AD5494 /* hjbbridge1.0.0.js */,
 				BB63AFC8206B5D2700AD5494 /* cameraTest-hjb.html */,
 			);
@@ -177,12 +186,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBAEC092206CF79600292788 /* WechatIMG34.jpeg in Resources */,
 				BB63AFCB206B5D7100AD5494 /* hjbbridge1.0.0.js in Resources */,
 				BB63AFBE206B5C8700AD5494 /* LaunchScreen.storyboard in Resources */,
 				BB63AFBB206B5C8700AD5494 /* Assets.xcassets in Resources */,
+				BBAEC090206CF78F00292788 /* WechatIMG33.jpeg in Resources */,
 				BBAEC08C206CF69C00292788 /* WechatIMG31.jpeg in Resources */,
 				BB63AFB9206B5C8700AD5494 /* Main.storyboard in Resources */,
 				BB63AFC9206B5D2700AD5494 /* cameraTest-hjb.html in Resources */,
+				BBAEC08E206CF78400292788 /* WechatIMG32.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,10 +1,3 @@
-//
-//  LoanViewController.m
-//  DataInteraction
-//
-//  Created by hjbsj on 2018/3/28.
-//  Copyright © 2018年 hjb. All rights reserved.
-//
 
 #define kSCreenWidth [UIScreen mainScreen].bounds.size.width
 #define kSCreenHeight [UIScreen mainScreen].bounds.size.height
