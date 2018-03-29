@@ -67,9 +67,9 @@
             }];
         }];
     }
-    else if ([message.name isEqualToString:@"getNetworkInfo"]) {
-        
-        NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    else if ([message.name isEqualToString:@"getNetworkInfo"]) {//获取网络类型
+        NSMutableDictionary *params = [NSMutableDictionary dictionary];
+        NSMutableDictionary *params = [NSMutableDictionary dictionary];
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
         if ([self.netWorkType isEqualToString:@"网络不可用"] || [self.netWorkType isEqualToString:@"未知网络"]) {
             params[@"code"] = @"5";
@@ -86,8 +86,8 @@
             NSLog(@"result = %@,error = %@",result,error);
         }];
     }
-    else if ([message.name isEqualToString:@"closeWindow"]) {
-        [self.navigationController popViewControllerAnimated:YES];
+    else if ([message.name isEqualToString:@"closeWindow"]) {//关闭webView
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 ```
@@ -118,6 +118,9 @@ failure:(void (^)(NSError *error))failureBlock;
 ```
 
 ```objc
+/**
+* 获取网络类型
+*/
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
