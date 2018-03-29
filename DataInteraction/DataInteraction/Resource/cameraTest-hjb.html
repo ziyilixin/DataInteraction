@@ -45,52 +45,6 @@
     <img src="#" alt="" width="200" id="img">
 <script>
     var tips = document.getElementById('tips')
-    /*var JSBridge_objCount = 0;
-    var JSBridge_objArray = new Array();
-
-    function JSBridgeObj(params){
-        this.objectJson = JSON.stringify(params);
-        this.sendBridgeObject = JSBridgeObj_SendObject;
-    }
-
-    function JSBridgeObj_SendObject(){
-        JSBridge_objArray[JSBridge_objCount] = this.objectJson;
-        var iFrame = document.createElement("IFRAME");
-        iFrame.setAttribute("src","JSBridge://bridge.lu.com?ReadNotificationWithId=" + JSBridge_objCount);
-        document.documentElement.appendChild(iFrame);
-        iFrame.parentNode.removeChild(iFrame);
-        iFrame = null;
-        JSBridge_objCount++;
-    }
-
-    function JSBridge_getJsonStringForObjectWithId(objId){
-        var jsonStr = JSBridge_objArray[objId];
-        JSBridge_objArray[objId] = null;
-        return jsonStr;
-    }
-
-    if(!window.bridge){
-        window.bridge = {
-            call:function(params){
-                try {
-                    if(window.AndroidBridge){
-                        window.AndroidBridge.jvWebViewDidCallFromJS(JSON.stringify(params));
-                    }else if(window.Android){
-                        if(params.retFun){
-                            window.Android[params.retFun](params.val);
-                        }else{
-                            window.Android.SkipInto(JSON.stringify(params));
-                        }
-                    }else{
-                        var obj = new JSBridgeObj(params);
-                        obj.sendBridgeObject();
-                    }
-                } catch (e) {
-                    tips.innerHTML = e.toString()
-                }
-            }
-        }
-    }*/
 </script>
 <script>
     var camara = document.getElementById('camara')
@@ -101,7 +55,7 @@
     
     tips.innerHTML = navigator.userAgent
     
-    // 拍照
+    //拍照
     camara.onclick = function() {
         tips.innerHTML = '拍照-点击事件'
         window.HJBbridge.getImageByCamera({
@@ -126,7 +80,7 @@
         })
     }
 
-    // 获取 GSP
+    //获取GPS
     gps.onclick = function () {
         tips.innerHTML = 'gps-点击事件'
         window.HJBbridge.getLocation({
@@ -154,7 +108,7 @@
         })
     }
 
-    // 网络
+    //网络
     network.onclick = function () {
         tips.innerHTML = '网络-点击事件'
             window.HJBbridge.getNetworkInfo({
@@ -173,16 +127,11 @@
         })
     }
 
-    // 关闭 webview
+    //关闭webview
     close.onclick = function() {
         window.HJBbridge.close()
     }
 
-    /*var ua = navigator.userAgent.toLowerCase()
-    if (ua.indexOf('lufax') > 0) {
-        sessionStorage.app = 'lufax'
-    }
-    tips.innerHTML = sessionStorage.app*/
 </script>
 </body>
 </html>

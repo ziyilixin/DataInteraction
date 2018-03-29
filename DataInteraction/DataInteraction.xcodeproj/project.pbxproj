@@ -17,9 +17,6 @@
 		BB63AFCB206B5D7100AD5494 /* hjbbridge1.0.0.js in Resources */ = {isa = PBXBuildFile; fileRef = BB63AFCA206B5D7100AD5494 /* hjbbridge1.0.0.js */; };
 		BB63AFCE206B5E8000AD5494 /* LoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB63AFCD206B5E8000AD5494 /* LoanViewController.m */; };
 		BB63AFD2206B7B2300AD5494 /* HLNetWorkReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BB63AFD1206B7B2300AD5494 /* HLNetWorkReachability.m */; };
-		BB63AFDA206B7CAC00AD5494 /* NSString+Sha1.m in Sources */ = {isa = PBXBuildFile; fileRef = BB63AFD5206B7CAC00AD5494 /* NSString+Sha1.m */; };
-		BB63AFDB206B7CAC00AD5494 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BB63AFD7206B7CAC00AD5494 /* Reachability.m */; };
-		BB63AFDC206B7CAC00AD5494 /* RNCachingURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = BB63AFD9206B7CAC00AD5494 /* RNCachingURLProtocol.m */; };
 		BB63AFE0206B816A00AD5494 /* HJBFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = BB63AFDF206B816A00AD5494 /* HJBFunction.m */; };
 /* End PBXBuildFile section */
 
@@ -40,12 +37,6 @@
 		BB63AFCD206B5E8000AD5494 /* LoanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoanViewController.m; sourceTree = "<group>"; };
 		BB63AFD0206B7B2300AD5494 /* HLNetWorkReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLNetWorkReachability.h; sourceTree = "<group>"; };
 		BB63AFD1206B7B2300AD5494 /* HLNetWorkReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLNetWorkReachability.m; sourceTree = "<group>"; };
-		BB63AFD4206B7CAC00AD5494 /* NSString+Sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Sha1.h"; sourceTree = "<group>"; };
-		BB63AFD5206B7CAC00AD5494 /* NSString+Sha1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Sha1.m"; sourceTree = "<group>"; };
-		BB63AFD6206B7CAC00AD5494 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		BB63AFD7206B7CAC00AD5494 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		BB63AFD8206B7CAC00AD5494 /* RNCachingURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCachingURLProtocol.h; sourceTree = "<group>"; };
-		BB63AFD9206B7CAC00AD5494 /* RNCachingURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCachingURLProtocol.m; sourceTree = "<group>"; };
 		BB63AFDE206B816A00AD5494 /* HJBFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJBFunction.h; sourceTree = "<group>"; };
 		BB63AFDF206B816A00AD5494 /* HJBFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJBFunction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				BB63AFDD206B815600AD5494 /* Function */,
-				BB63AFD3206B7CAC00AD5494 /* WebViewCache */,
 				BB63AFCF206B7B2300AD5494 /* NetWorkType */,
 				BB63AFC7206B5CF100AD5494 /* Resource */,
 				BB63AFB1206B5C8700AD5494 /* AppDelegate.h */,
@@ -115,19 +105,6 @@
 				BB63AFD1206B7B2300AD5494 /* HLNetWorkReachability.m */,
 			);
 			path = NetWorkType;
-			sourceTree = "<group>";
-		};
-		BB63AFD3206B7CAC00AD5494 /* WebViewCache */ = {
-			isa = PBXGroup;
-			children = (
-				BB63AFD4206B7CAC00AD5494 /* NSString+Sha1.h */,
-				BB63AFD5206B7CAC00AD5494 /* NSString+Sha1.m */,
-				BB63AFD6206B7CAC00AD5494 /* Reachability.h */,
-				BB63AFD7206B7CAC00AD5494 /* Reachability.m */,
-				BB63AFD8206B7CAC00AD5494 /* RNCachingURLProtocol.h */,
-				BB63AFD9206B7CAC00AD5494 /* RNCachingURLProtocol.m */,
-			);
-			path = WebViewCache;
 			sourceTree = "<group>";
 		};
 		BB63AFDD206B815600AD5494 /* Function */ = {
@@ -216,10 +193,7 @@
 				BB63AFCE206B5E8000AD5494 /* LoanViewController.m in Sources */,
 				BB63AFB6206B5C8700AD5494 /* ViewController.m in Sources */,
 				BB63AFC1206B5C8800AD5494 /* main.m in Sources */,
-				BB63AFDC206B7CAC00AD5494 /* RNCachingURLProtocol.m in Sources */,
-				BB63AFDB206B7CAC00AD5494 /* Reachability.m in Sources */,
 				BB63AFD2206B7B2300AD5494 /* HLNetWorkReachability.m in Sources */,
-				BB63AFDA206B7CAC00AD5494 /* NSString+Sha1.m in Sources */,
 				BB63AFB3206B5C8700AD5494 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BJJ5HEDBX;
 				INFOPLIST_FILE = DataInteraction/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.hjb.DataInteraction2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -372,7 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BJJ5HEDBX;
 				INFOPLIST_FILE = DataInteraction/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.hjb.DataInteraction2;
 				PRODUCT_NAME = "$(TARGET_NAME)";

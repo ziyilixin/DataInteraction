@@ -30,12 +30,18 @@ typedef void (^LocationBlock)(NSMutableDictionary *addDic); /**返回字典*/
  *  @param finishBlock    调用成功后回调
  *  @param failureBlock   调用失败后回调
  */
-
 - (void)
 useCameraAndGalleryWithViewController:(UIViewController *)viewController
 finish:(void (^)(UIImage *image))finishBlock
 failure:(void (^)(NSError *error))failureBlock;
 
+/**
+ *  调用摄像头的方法
+ *
+ *  @param viewController 当前控制器
+ *  @param finishBlock    调用成功后回调
+ *  @param failureBlock   调用失败后回调
+ */
 - (void)
 useCameraWithViewController:(UIViewController *)viewController
 finish:(void (^)(UIImage *image))finishBlock

@@ -17,9 +17,8 @@
 #import "LoanViewController.h"
 #import <WebKit/WebKit.h>
 #import <CoreLocation/CLLocationManager.h>
-#import "HLNetWorkReachability.h"
-#import "Reachability.h"
 #import "HJBFunction.h"
+#import "HLNetWorkReachability.h"
 
 @interface LoanViewController ()<WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler>
 @property (nonatomic, strong) WKWebView *webView;
@@ -72,12 +71,7 @@
         NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:newUserAgent,@"UserAgent",nil];
         [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        if (@available(iOS 9.0, *)) {
-            [self.webView setCustomUserAgent:newUserAgent];
-        } else {
-            // Fallback on earlier versions
-            
-        }
+        [self.webView setCustomUserAgent:newUserAgent];
     }];
     
     [self.view addSubview:self.webView];

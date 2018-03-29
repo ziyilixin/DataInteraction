@@ -90,7 +90,6 @@ failure:(void (^)(NSError *error))failureBlock {
                                           
                                           failureBlock(error);
                                       }
-                                      
                                   };
                                   
                               }];
@@ -139,16 +138,6 @@ useCameraWithViewController:(UIViewController *)viewController
 finish:(void (^)(UIImage *image))finishBlock
 failure:(void (^)(NSError *error))failureBlock
 {
-    //    //弹出选择视图
-    //    UIAlertController *alertVC = [UIAlertController
-    //                                  alertControllerWithTitle:@"上传图片"
-    //                                  message:@""
-    //                                  preferredStyle:UIAlertControllerStyleActionSheet];
-    //
-    //    UIAlertAction *action = [UIAlertAction
-    //                              actionWithTitle:@"拍照"
-    //                              style:UIAlertActionStyleDefault
-    //                              handler:^(UIAlertAction *_Nonnull action) {
     //调用相机
     [self useCameraWithViewController:viewController];
     //返回结果，并判断
@@ -168,19 +157,6 @@ failure:(void (^)(NSError *error))failureBlock
         }
         
     };
-    //
-    //                              }];
-    //    UIAlertAction *action2 =
-    //    [UIAlertAction actionWithTitle:@"取消"
-    //                             style:UIAlertActionStyleCancel
-    //                           handler:^(UIAlertAction *_Nonnull action){
-    //
-    //                           }];
-    //
-    //    [alertVC addAction:action];
-    //    [alertVC addAction:action2];
-    //
-    //    [viewController presentViewController:alertVC animated:YES completion:nil];
 }
 
 #pragma mark 调用相册的方法
@@ -207,6 +183,7 @@ failure:(void (^)(NSError *error))failureBlock
     // 通过模态视图弹出相册（绝对不能使用导航控制器push）
     [viewController presentViewController:_pickerVC animated:YES completion:nil];
 }
+
 #pragma mark 调用相机的方法
 - (void)useCameraWithViewController:(UIViewController *)viewController {
     if ([UIImagePickerController
@@ -222,12 +199,10 @@ failure:(void (^)(NSError *error))failureBlock
                 }
                 _pickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
                 // 设置媒体类型
-                //      _pickerVC.mediaTypes = @[ @"public.movie", @"public.image" ];
                 _pickerVC.mediaTypes = @[@"public.image" ];
                 
                 _pickerVC.delegate = self;
                 // 通过模态视图弹出相册（绝对不能使用导航控制器push）
-                
                 [viewController presentViewController:_pickerVC
                                              animated:YES
                                            completion:nil];
@@ -260,13 +235,14 @@ failure:(void (^)(NSError *error))failureBlock
             
         }
     else {
-        [self alertViewWithTitle:@"提示"
-                         message:@"此设备没有摄像头"
-                     buttonTitle:@"确定"];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"此设备没有摄像头" preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {}]];
+        [viewController presentViewController:alertController animated:YES completion:^{}];
     }
 }
 
 #pragma mark -UIImagePickerControllerDelegate
+
 // 选择照片调用的协议方法
 - (void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info {
@@ -287,19 +263,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
 // 点击取消按钮调用的协议方法()
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [picker dismissViewControllerAnimated:YES completion:nil];
-}
-
-#pragma mark - 提示视图（实例方法）
-- (void)alertViewWithTitle:(NSString *)title
-                   message:(NSString *)message
-               buttonTitle:(NSString *)buttonTitle {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                    message:message
-                                                   delegate:self
-                                          cancelButtonTitle:nil
-                                          otherButtonTitles:buttonTitle, nil];
-    
-    [alert show];
 }
 
 #pragma mark - 获取用户地理位置

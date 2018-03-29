@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "HLNetWorkReachability.h"
-#import "Reachability.h"
 
 @interface AppDelegate ()
 @property (nonatomic) HLNetWorkReachability *hostReachability;
@@ -20,6 +19,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kNetWorkReachabilityChangedNotification object:nil];
+    
     HLNetWorkReachability *reachability = [HLNetWorkReachability reachabilityWithHostName:@"www.baidu.com"];
     self.hostReachability = reachability;
     [reachability startNotifier];
@@ -27,6 +28,34 @@
     return YES;
 }
 
+- (void)reachabilityChanged:(NSNotification *)notification
+{
+    HLNetWorkReachability *curReach = [notification object];
+    HLNetWorkStatus netStatus = [curReach currentReachabilityStatus];
+    switch (netStatus) {
+        case HLNetWorkStatusNotReachable:
+            NSLog(@"网络不可用");
+            break;
+        case HLNetWorkStatusUnknown:
+            NSLog(@"未知网络");
+            break;
+        case HLNetWorkStatusWWAN2G:
+            NSLog(@"2G网络");
+            break;
+        case HLNetWorkStatusWWAN3G:
+            NSLog(@"3G网络");
+            break;
+        case HLNetWorkStatusWWAN4G:
+            NSLog(@"4G网络");
+            break;
+        case HLNetWorkStatusWiFi:
+            NSLog(@"WiFi");
+            break;
+            
+        default:
+            break;
+    }
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
