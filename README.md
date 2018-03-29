@@ -2,6 +2,9 @@
 原生(Objective-C)与H5页面的交互
 
 ![image](https://github.com/ziyilixin/DataInteraction/blob/master/DataInteraction/DataInteraction/Resource/WechatIMG31.jpeg)
+![image](https://github.com/ziyilixin/DataInteraction/blob/master/DataInteraction/DataInteraction/Resource/WechatIMG32.jpeg)
+![image](https://github.com/ziyilixin/DataInteraction/blob/master/DataInteraction/DataInteraction/Resource/WechatIMG33.jpeg)
+![image](https://github.com/ziyilixin/DataInteraction/blob/master/DataInteraction/DataInteraction/Resource/WechatIMG34.jpeg)
 
 ##WKWebView注册方法
 
