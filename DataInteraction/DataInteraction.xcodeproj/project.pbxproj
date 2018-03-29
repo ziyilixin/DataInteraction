@@ -18,6 +18,7 @@
 		BB63AFCE206B5E8000AD5494 /* LoanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB63AFCD206B5E8000AD5494 /* LoanViewController.m */; };
 		BB63AFD2206B7B2300AD5494 /* HLNetWorkReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BB63AFD1206B7B2300AD5494 /* HLNetWorkReachability.m */; };
 		BB63AFE0206B816A00AD5494 /* HJBFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = BB63AFDF206B816A00AD5494 /* HJBFunction.m */; };
+		BBAEC08C206CF69C00292788 /* WechatIMG31.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BBAEC08B206CF69C00292788 /* WechatIMG31.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		BB63AFD1206B7B2300AD5494 /* HLNetWorkReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLNetWorkReachability.m; sourceTree = "<group>"; };
 		BB63AFDE206B816A00AD5494 /* HJBFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJBFunction.h; sourceTree = "<group>"; };
 		BB63AFDF206B816A00AD5494 /* HJBFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJBFunction.m; sourceTree = "<group>"; };
+		BBAEC08B206CF69C00292788 /* WechatIMG31.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WechatIMG31.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		BB63AFC7206B5CF100AD5494 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				BBAEC08B206CF69C00292788 /* WechatIMG31.jpeg */,
 				BB63AFCA206B5D7100AD5494 /* hjbbridge1.0.0.js */,
 				BB63AFC8206B5D2700AD5494 /* cameraTest-hjb.html */,
 			);
@@ -177,6 +180,7 @@
 				BB63AFCB206B5D7100AD5494 /* hjbbridge1.0.0.js in Resources */,
 				BB63AFBE206B5C8700AD5494 /* LaunchScreen.storyboard in Resources */,
 				BB63AFBB206B5C8700AD5494 /* Assets.xcassets in Resources */,
+				BBAEC08C206CF69C00292788 /* WechatIMG31.jpeg in Resources */,
 				BB63AFB9206B5C8700AD5494 /* Main.storyboard in Resources */,
 				BB63AFC9206B5D2700AD5494 /* cameraTest-hjb.html in Resources */,
 			);
